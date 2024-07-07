@@ -13,3 +13,721 @@
 --VeryDarkDesaturatedViolet/*(submit button background)*/: hsl(271, 36%, 24%);
 --VeryLightMagenta/*(radio button outline)*/: hsl(289, 100%, 72%);
 }
+@font-face {
+    font-family: 'Rubik';
+    src: url(/font/Rubik[wght].ttf);
+}
+body{
+    font-family: 'Rubik';
+}
+@media only screen and (max-width:320px){
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    main .bg{
+        background-color:var(--ModerateViolet);
+        width: 50%;
+        height: 80vh;
+        border-radius: 0px 0px 120px 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    main .bgdown{
+        background-color:var(--LightGrayishViolet);
+        width: 50%;
+        height: 45vh;
+        border-radius: 120px 0px 0px 0px;
+        position: absolute;
+        bottom: -50%;
+        right: 0;
+        z-index: -1;
+    }
+    section{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 80%;
+        margin-top: 10%;
+        opacity: 0;
+        transition: all 3s;
+    }
+    section .left{
+        background-color: var(--White);
+        padding: 10px;
+        border-radius: 20px;
+        border:2px solid rgba(0, 0, 0, 0.078);
+    }
+    section .left .leftin{
+        background-color: var(--LightGrayishViolet);
+        border-radius: 15px 15px 0 0;
+        padding-bottom: 5%;
+        border-radius: 0 0 12px 12px;
+    }
+    section .left .leftin .white-space{
+        background-color: var(--White);
+        width: 30%;
+        height: 5vh;
+        border-radius: 15px;
+        position: absolute;
+        margin-left: 20%;
+        margin-top: -2%;
+    }
+    section .top-userphone{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: linear-gradient(to left,var(--LightMagenta),var(--LightViolet));
+        border-radius: 20px 20px 4px 4px;
+        padding-top: 8%;
+    }
+    section .top-userphone .arrow{
+        transform: rotate(180deg);
+        height: fit-content;
+        width: 5%;
+        border: none;
+    }
+    section .top-userphone .user-detail{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin-left: -3%;
+    }
+    section .top-userphone .user-detail .name{
+        font-size: 10px;
+        color: var(--White);
+        font-weight: 600;
+    }
+    section .top-userphone .user-detail span{
+        font-size: 8px;
+        color: var(--GrayishBlue);
+    }
+    section .top-userphone .threedots{
+        display: flex;
+        transform: rotate(90deg);
+        color: white;
+    }
+    section .top-userphone img{
+        height: fit-content;
+        width: 10%;
+        border-radius: 100vmax;
+        border:1.4px solid white;
+    }
+    section .firsttwop{
+        padding-left: 5px;
+    }
+    section .firsttwop p{
+        font-size: 8px;
+        width: 50%;
+        padding: 5px;
+        border-radius: 7px 7px 7px 0;
+        color: var(--LightViolet);
+        background-color:#ede5f4;
+    }
+    section .dogs{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+    section .dogs .dogsimg{
+        display: flex;
+        gap: 4px;
+        align-items:flex-end;
+        justify-content: flex-end;
+    }
+    section .dogs .dogsimg img{
+        height: fit-content;
+        width: 20%;
+        border-radius: 12px;
+    }
+    section .dogs p{
+        font-size: 8px;
+        width: 50%;
+        padding: 5px;
+        border-radius: 7px 7px 0 7px;
+        color: var(--DesaturatedDarkViolet);
+        background-color:white;
+    }
+    section .dogs .here{
+        width: 54%;
+    }
+    section .dogs .can{
+        width: fit-content;
+        margin-top: -1%;
+    }
+    section .lastp{
+        padding-left: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 5%;
+    }
+    section .lastp .she{
+        font-size: 8px;
+        width: 52%;
+        padding: 5px;
+        border-radius: 7px 7px 7px 0;
+        color: var(--LightViolet);
+        background-color:#ede5f4;
+    }
+    section .lastp .pricediv1,.pricediv2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(to right,var(--LightMagenta),var(--LightViolet));
+        border-radius: 10px 10px 10px 0;
+        width: 70%;
+    }
+    section .lastp .pricediv1 p,.pricediv2 p{
+        font-size: 10px;
+        color: var(--LightGrayishViolet);
+    }
+    section .lastp .pricediv1 .twenty-nine,.pricediv2 .forty-nine{
+        font-size: 12px;
+        border-radius: 7px 7px 7px 0;
+        color: var(--White);
+        font-weight: 600;
+    }
+    section .messagediv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        border-radius: 100vmax;
+    }
+    section .messagediv p{
+        font-size: 10px;
+        margin-left: 8%;
+        color: var(--DarkGrayishViolet);
+    }
+    section .messagediv img{
+        background-color: var(--VeryDarkDesaturatedViolet);
+        height: fit-content;
+        width: 4%;
+        padding: 5px 8px 5px 8px;
+        border-radius: 100vmax;
+    }
+    section .right{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section .right h1{
+        color: var(--VeryDarkDesaturatedViolet);
+        font-size: 32px;
+    }
+    section .right h2{
+        color: var(--DarkGrayishViolet);
+        font-size: 14px;
+        font-weight: 400;
+        width: 110%;
+        margin-top: -5%;
+    }
+}
+@media only screen and (min-width:320px){
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    main .bg{
+        background-color:var(--ModerateViolet);
+        width: 50%;
+        height: 80vh;
+        border-radius: 0px 0px 120px 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    main .bgdown{
+        background-color:var(--LightGrayishViolet);
+        width: 50%;
+        height: 45vh;
+        border-radius: 120px 0px 0px 0px;
+        position: absolute;
+        bottom: -50%;
+        right: 0;
+        z-index: -1;
+    }
+    section{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 80%;
+        margin-top: 10%;
+        opacity: 0;
+        transition: all 3s;
+    }
+    section .left{
+        background-color: var(--White);
+        padding: 10px;
+        border-radius: 20px;
+        border:2px solid rgba(0, 0, 0, 0.078);
+    }
+    section .left .leftin{
+        background-color: var(--LightGrayishViolet);
+        border-radius: 15px 15px 0 0;
+        padding-bottom: 5%;
+        border-radius: 0 0 12px 12px;
+    }
+    section .left .leftin .white-space{
+        background-color: var(--White);
+        width: 30%;
+        height: 5vh;
+        border-radius: 15px;
+        position: absolute;
+        margin-left: 20%;
+        margin-top: -2%;
+    }
+    section .top-userphone{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: linear-gradient(to left,var(--LightMagenta),var(--LightViolet));
+        border-radius: 20px 20px 4px 4px;
+        padding-top: 8%;
+    }
+    section .top-userphone .arrow{
+        transform: rotate(180deg);
+        height: fit-content;
+        width: 5%;
+        border: none;
+    }
+    section .top-userphone .user-detail{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin-left: -3%;
+    }
+    section .top-userphone .user-detail .name{
+        font-size: 10px;
+        color: var(--White);
+        font-weight: 600;
+    }
+    section .top-userphone .user-detail span{
+        font-size: 8px;
+        color: var(--GrayishBlue);
+    }
+    section .top-userphone .threedots{
+        display: flex;
+        transform: rotate(90deg);
+        color: white;
+    }
+    section .top-userphone img{
+        height: fit-content;
+        width: 10%;
+        border-radius: 100vmax;
+        border:1.4px solid white;
+    }
+    section .firsttwop{
+        padding-left: 5px;
+    }
+    section .firsttwop p{
+        font-size: 8px;
+        width: 50%;
+        padding: 5px;
+        border-radius: 7px 7px 7px 0;
+        color: var(--LightViolet);
+        background-color:#ede5f4;
+    }
+    section .dogs{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+    section .dogs .dogsimg{
+        display: flex;
+        gap: 4px;
+        align-items:flex-end;
+        justify-content: flex-end;
+    }
+    section .dogs .dogsimg img{
+        height: fit-content;
+        width: 20%;
+        border-radius: 12px;
+    }
+    section .dogs p{
+        font-size: 8px;
+        width: 50%;
+        padding: 5px;
+        border-radius: 7px 7px 0 7px;
+        color: var(--DesaturatedDarkViolet);
+        background-color:white;
+    }
+    section .dogs .here{
+        width: 54%;
+    }
+    section .dogs .can{
+        width: fit-content;
+        margin-top: -1%;
+    }
+    section .lastp{
+        padding-left: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 5%;
+    }
+    section .lastp .she{
+        font-size: 8px;
+        width: 52%;
+        padding: 5px;
+        border-radius: 7px 7px 7px 0;
+        color: var(--LightViolet);
+        background-color:#ede5f4;
+    }
+    section .lastp .pricediv1,.pricediv2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(to right,var(--LightMagenta),var(--LightViolet));
+        border-radius: 10px 10px 10px 0;
+        width: 70%;
+    }
+    section .lastp .pricediv1 p,.pricediv2 p{
+        font-size: 10px;
+        color: var(--LightGrayishViolet);
+    }
+    section .lastp .pricediv1 .twenty-nine,.pricediv2 .forty-nine{
+        font-size: 12px;
+        border-radius: 7px 7px 7px 0;
+        color: var(--White);
+        font-weight: 600;
+    }
+    section .messagediv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        border-radius: 100vmax;
+    }
+    section .messagediv p{
+        font-size: 10px;
+        margin-left: 8%;
+        color: var(--DarkGrayishViolet);
+    }
+    section .messagediv img{
+        background-color: var(--VeryDarkDesaturatedViolet);
+        height: fit-content;
+        width: 4%;
+        padding: 5px 8px 5px 8px;
+        border-radius: 100vmax;
+    }
+    section .right{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section .right h1{
+        color: var(--VeryDarkDesaturatedViolet);
+        font-size: 32px;
+    }
+    section .right h2{
+        color: var(--DarkGrayishViolet);
+        font-size: 14px;
+        font-weight: 400;
+        width: 110%;
+        margin-top: -5%;
+    }
+}
+@media only screen and (min-width:344px) and (min-height:882px){
+    main .bg{
+        height: 60vh;
+    }
+    section{
+        margin-top: 30%;
+    }
+    section .left .leftin .white-space{
+        width: 28%;
+        height: 3vh;
+        margin-left: 24%;
+        margin-top: -1.8%;
+    }
+    section .right h2{
+        font-size: 16px;
+        width: 120%;
+    }
+}
+@media only screen and (min-width:375px){
+    main .bg{
+        width: 52%;
+        height: 60vh;
+        border-radius: 0px 0px 320px 0px;
+    }
+    section{
+        width: 70%;
+        margin-top: 25%;
+    }
+    section .left .leftin .white-space{
+        width: 30%;
+        height: 3vh;
+        margin-left: 18%;
+        margin-top: -2%;
+    }
+    section .messagediv{
+        justify-content: space-between;
+    }
+    section .right h1{
+        font-size: 40px;
+        width: 135%;
+    }
+    section .right h2{
+        font-size: 18px;
+        width: 140%;
+    }
+}
+@media only screen and (min-width:412px){
+    main .bg{
+        width: 42%;
+        height: 70vh;
+    }
+    section{
+        width: 62%;
+    }
+    section .left .leftin .top-userphone{
+        padding-top: 2%;
+    }
+    section .left .leftin .white-space{
+        width: 20%;
+        height: 3vh;
+        margin-left: 18%;
+        margin-top: -1.8%;
+    }
+}
+@media only screen and (min-width:768px){
+    section{
+        width: 55%;
+    }
+    section .left{
+        padding: 15px;
+    }
+    section .left .leftin .white-space{
+        width: 25%;
+        margin-left: 13%;
+        margin-top: -1.6%;
+    }
+    section .top-userphone{
+        padding-top: 18%;
+    }
+    section .top-userphone .user-detail .name{
+        font-size: 14px;
+    }
+    section .top-userphone .user-detail span{
+        font-size: 12px;
+    }
+    section .top-userphone .threedots{
+        font-size: 25px;
+    }
+    section .firsttwop{
+        padding-left: 10px;
+    }
+    section .firsttwop p{
+        font-size: 16px;
+        width: 50%;
+    }
+    section .dogs .dogsimg{
+        gap: 7px;
+    }
+    section .dogs p{
+        font-size: 16px;
+    }
+    section .dogs .here{
+        width: 60%;
+    }
+    section .lastp .she{
+        font-size: 16px;
+        width: 60%;
+    }
+    section .lastp .pricediv1,.pricediv2{
+        width: 64%;
+    }
+    section .lastp .pricediv1 p,.pricediv2 p{
+        font-size: 16px;
+    }
+    section .lastp .pricediv1 .twenty-nine,.pricediv2 .forty-nine{
+        font-size: 20px;
+    }
+    section .messagediv p{
+        font-size: 16px;
+    }
+    section .messagediv img{
+        padding: 8px 10px 8px 10px;
+        margin-right: 8px;
+    }
+    section .right h1{
+        font-size: 62px;
+    }
+    section .right h2{
+        font-size: 34px;
+        width: 160%;
+    }
+}
+@media only screen and (min-width:992px){
+    main .bg{
+        width: 28%;
+        border-radius: 0px 0px 180px 180px;
+        left: -4%;
+    }
+    main .bgdown{
+        width: 15%;
+        height: 75vh;
+        bottom: 0;
+        border-radius: 180px 0 0 0;
+    }
+    section{
+        flex-direction: row-reverse;
+        margin-top: 6%;
+        align-items: center;
+        gap: 30px;
+        width: 70%;
+    }
+    section .left{
+        width: 35%;    
+    }
+    section .left .leftin .white-space{
+        width: 10%;
+        height: 3vh;
+        margin-left: 7%;
+        margin-top: -0.3%;
+    }
+    section .firsttwop p{
+        font-size: 8px;
+    }
+    section .dogs p{
+        font-size: 8px;
+    }
+    section .lastp .she{
+        font-size: 8px;
+    }
+    section .lastp .pricediv1 p,.pricediv2 p{
+        font-size: 10px;
+    }
+    section .lastp .pricediv1 .twenty-nine,.pricediv2 .forty-nine{
+        font-size: 12px;
+    }
+    section .messagediv p{
+        font-size: 10px;
+    }
+    section .messagediv img{
+        width: 4%;
+        padding: 5px 8px 5px 8px;
+    }
+    section .right{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        width: 50%;
+    }
+    section .right h1{
+        font-size: 40px;
+        width: 100%;
+        font-weight: 400;
+    }
+    section .right h2{
+        font-size: 14px;
+        width: 114%;
+        margin-top: 0%;
+    }
+}
+@media only screen and (min-width:1272px){
+    main .bg{
+        width: 26%;
+    }
+    section{
+        gap: 80px;
+        width: 85%;
+        margin-top: 3%;
+        margin-left: -5%;
+    }
+    section .left{
+        width: 25%;    
+    }
+    section .left .leftin .white-space{
+        width: 10%;
+        height: 3vh;
+        margin-left: 6%;
+        margin-top: -0.3%;
+    }
+    section .firsttwop p{
+        font-size: 8px;
+    }
+    section .dogs p{
+        font-size: 8px;
+    }
+    section .lastp .she{
+        font-size: 8px;
+    }
+    section .lastp .pricediv1 p,.pricediv2 p{
+        font-size: 10px;
+    }
+    section .lastp .pricediv1 .twenty-nine,.pricediv2 .forty-nine{
+        font-size: 12px;
+    }
+    section .messagediv p{
+        font-size: 10px;
+    }
+    section .messagediv img{
+        width: 4%;
+        padding: 5px 8px 5px 8px;
+    }
+    section .right{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        width: 50%;
+    }
+    section .right h1{
+        font-size: 40px;
+        width: 100%;
+        font-weight: 400;
+    }
+    section .right h2{
+        font-size: 14px;
+        width: 75%;
+        margin-top: 0%;
+    }
+}
+@media only screen and (min-width:1280px) and (min-height:800px){
+    main .bg{
+        width: 26%;
+    }
+    section{
+        margin-top: 8%;
+    }
+    section .left{
+        width: 25%;    
+    }
+    section .right h1{
+        font-size: 55px;
+    }
+    section .right h2{
+        font-size: 18px;
+        width: 95%;
+    }
+}
+@media only screen and (min-width:1600px) and (min-height:800px){
+    section .left{
+        width: 20%;    
+    }
+    section .left .leftin .white-space{
+        margin-left: 3.5%;
+    }
+    section .right h2{
+        font-size: 19px;
+        width: 80%;
+    }
+}
