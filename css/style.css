@@ -15,7 +15,7 @@
 }
 @font-face {
     font-family: 'Rubik';
-    src: url(/font/Rubik[wght].ttf);
+    src: url("/font/Rubik[wght].ttf");
 }
 body{
     font-family: 'Rubik';
